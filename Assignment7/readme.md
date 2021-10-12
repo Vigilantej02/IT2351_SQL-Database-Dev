@@ -7,6 +7,6 @@ To accomplish this, I would first create an event called "yearly_delete_customer
 (Lets assume that we're not using the AP database, but rather one where a sales table is linked to the customer table through customer_id)
 ``` SQL
 DO BEGIN
- 			DELETE FROM customer_id, customer_first_name, customer_last_name WHERE last_transaction_date < NOW() - INTERVAL 1 YEAR;
+   DELETE FROM customer_id, customer_first_name, customer_last_name WHERE last_transaction_date < NOW() - INTERVAL 1 YEAR;
 END
 ```
